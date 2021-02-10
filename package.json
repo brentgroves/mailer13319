@@ -1,0 +1,23 @@
+{
+  "name": "Mailer13319",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^2.2.1",
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
+    "isomorphic-fetch": "^3.0.0",
+    "path": "^0.12.7",
+    "qs": "^6.9.6"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25"
+  }
+}
