@@ -43,11 +43,25 @@ const mail =  {
 // https://docs.microsoft.com/en-us/graph/tutorials/node?tutorial-step=3
 // https://www.npmjs.com/package/@microsoft/microsoft-graph-client
 // https://github.com/microsoftgraph/msgraph-sdk-javascript/blob/HEAD/docs/OtherAPIs.md
-let res = await client.api('/users/bgroves@buschegroup.com/sendMail')
-.post(mail);
+// let res = await client.api('/users/bgroves@buschegroup.com/sendMail')
+// .post(mail);
 
+try {
+  common.log(`Starting Alarms13319`);
+  common.log(`MQTT_SERVER=${MQTT_SERVER},MQTT_PORT=${MQTT_PORT}`);
+  const mqttClient = mqtt.connect(`mqtt://${MQTT_SERVER}:${MQTT_PORT}`);
 
-//    return client;
+  mqttClient.on("connect", function () {
+    mqttClient.subscribe("presence", function (err) {
+      if (!err) {
+        mqttClient.publish("presence", "Hello mqtt");
+      }
+    });
+  });
+} catch (err) {
+  console.log("Error !!!", err);
+}
+
 
 }
 main();

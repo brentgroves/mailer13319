@@ -10,10 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@bgroves/common": "^1.2.0",
     "@microsoft/microsoft-graph-client": "^2.2.1",
     "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "isomorphic-fetch": "^3.0.0",
+    "mqtt": "^4.2.6",
     "path": "^0.12.7",
     "qs": "^6.9.6"
   },
