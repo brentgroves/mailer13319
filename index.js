@@ -1,7 +1,12 @@
 // https://www.npmjs.com/package/@microsoft/microsoft-graph-client
+const mqtt = require("mqtt");
 const ClientCredentialAuthenticationProvider = require("./AuthenticationProvider");
 var graph = require("@microsoft/microsoft-graph-client");
+const common = require('@bgroves/common');
 require("isomorphic-fetch");
+var mqttClient;
+
+var { MQTT_SERVER,MQTT_PORT } = process.env;
 
 async function main() 
 {
