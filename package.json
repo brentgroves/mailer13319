@@ -1,10 +1,12 @@
 {
-  "name": "Mailer13319",
+  "name": "mailer13319",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/",
+    "start": "node src/"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
     "qs": "^6.9.6"
   },
   "devDependencies": {
-    "@types/node": "^14.14.25"
+    "@types/node": "^14.14.25",
+    "nodemon": "^2.0.7"
   }
 }
